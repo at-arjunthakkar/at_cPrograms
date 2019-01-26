@@ -17,7 +17,7 @@ int pop(int *arr,int top)
 void printStack(int *arr,int top)
 {
 	int i; 
-	for(i=top;i>0;i--)
+	for(i=top;i>=0;i--)
 	{
 		printf("stack [%d] is %d",(top-i),arr[i]);
 		printf("\n");
@@ -32,7 +32,7 @@ void getTop(int *arr,int top)
 
 void isEmpty(int top)
 {
-	if(top == 0)
+	if(top == -1)
 	{
 		printf("stack is empty\n");		
 	}	
@@ -45,7 +45,7 @@ void isEmpty(int top)
 
 int main()
 {	
-	int top=0,n;
+	int top=-1,n;
 	int *arr;
 	printf("Enter size of Array");
 	scanf("%d",&n);
