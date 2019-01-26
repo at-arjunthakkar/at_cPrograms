@@ -36,7 +36,7 @@ void insertNodeAtBegining(int data)
 
 void insertNodeAtEnd(int data)
 {
-	printf("<---------------- insert at end LinkList--------------->\n");
+	//printf("<---------------- insert at end LinkList--------------->\n");
 	struct Node* temp,*temp2;
 	temp = getNewNode(data);
 	temp2 = head;
@@ -49,7 +49,7 @@ void insertNodeAtEnd(int data)
 
 void insertNodeAtNthPos(int data,int pos)
 {
-	printf("<---------------- insert at end LinkList--------------->\n");
+	//printf("<---------------- insert at nth position LinkList--------------->\n");
 	struct Node* temp,*temp2,*temp1;
 	int i;
 	temp = getNewNode(data);
@@ -85,7 +85,6 @@ void delNodeFromBegining()
 
 void delNodeFromEnd()
 {
-	printf("<---------------- insert at end LinkList--------------->\n");
 	struct Node* temp,*temp2;
 	temp2 = head;
 	while(temp2->nextNode != NULL)
@@ -99,7 +98,6 @@ void delNodeFromEnd()
 
 void delNodeFromNthPos(int pos)
 {
-	printf("<---------------- insert at end LinkList--------------->\n");
 	struct Node* temp,*temp2,*temp1;
 	int i;
 	temp2 = head;
@@ -171,17 +169,23 @@ int main()
 	insertNodeAtBegining(20);
 	insertNodeAtBegining(30);
 	insertNodeAtBegining(40);
+
 	printf("<---------------- Dispaying LinkList--------------->\n");
 	dispLinkList(head);
+
 	dispLinkList_iterative();
+
 	printf("<---------------- Dispaying LinkList in Reverse--------------->\n");
 	disLinkListInReverse(head);
+
 	insertNodeAtEnd(50);
 	printf("<---------------- Dispaying LinkList--------------->\n");
 	dispLinkList(head);
+
 	insertNodeAtNthPos(25,3);
 	printf("<---------------- Dispaying LinkList--------------->\n");
 	dispLinkList(head);
+	
 	reverseLinkList();
 	printf("<---------------- Dispaying LinkList--------------->\n");
 	dispLinkList(head);
@@ -197,6 +201,6 @@ int main()
 	delNodeFromNthPos(2);
 	printf("<---------------- Dispaying LinkList--------------->\n");
 	dispLinkList(head);
-	
+
 	return 0;
 }
